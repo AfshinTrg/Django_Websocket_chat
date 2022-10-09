@@ -73,7 +73,11 @@ WSGI_APPLICATION = 'wschat.wsgi.application'
 # Channels
 ASGI_APPLICATION = 'wschat.asgi.application'
 
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
+}
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
